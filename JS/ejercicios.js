@@ -16,11 +16,11 @@ function game(user, maq) {
     //console.log('usuario: ' + user);
     //console.log('maquina: '+ maq);
     if(user > maq){
-        console.log('¡¡¡Felicidades ganaste!!!');
+        alert('¡¡¡Felicidades ganaste!!!');
     } else if ( user < maq) {
-        console.log('Suerte para la proxima...');
+        alert('Suerte para la proxima...');
     } else 
-        console.log('¡Empate!');
+        alert('¡Empate!');
 }
 
 // Funcion que lanza el numero aleatorio para compararlo con el del jugador 
@@ -29,7 +29,6 @@ function game(user, maq) {
 function maquina(){
 const num = Math.round(Math.random()*3) 
 return num
-
 }
 
 // Ciclo del juego, se repite las veces que el usuario quiera jugar, y si se equivoca ingresando un valor no valido 
@@ -42,21 +41,21 @@ do{
         switch (opcion) {
             case '1':
                 game(1,parseInt(maquina()))
-                console.log('El usuario escogio: Piedra');
+                alert('El usuario escogio: Piedra');
                 break;
 
             case '2':
                 game(2,parseInt(maquina()))
-                console.log('El usuario escogio: Papel');
+                alert('El usuario escogio: Papel');
                 break;
 
             case '3':
                 game(3,parseInt(maquina()))
-                console.log('El usuario escogio: Tijera');
+                alert('El usuario escogio: Tijera');
                 break;
 
             default:
-                console.log('Opcion no valida. \nIngresa un numero');
+                alert('Opcion no valida. \nIngresa un numero');
                 i--;
                 break;
         }
@@ -72,8 +71,8 @@ do{
     
 } while (inicio_juego == "SI");
 
-console.log("Nombre de usuario " + nombre);
-console.log("Cantidad de juegos: " + numeros_juego);
+alert("Nombre de usuario " + nombre + "\nCantidad de juegos: " + numeros_juego);
+
 
 
 
