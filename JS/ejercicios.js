@@ -27,7 +27,7 @@ function game(user, maq) {
 // se guarda en la variable num, se redondea con .round, al multiplicarlo por 3 nos da como resultado el: 0, 1, 2 y 3
 // para compararlo con el numero que dio el usuario y asi pueda existir el que gane, empate o que pierda
 function maquina(){
-const num = Math.round(Math.random()*3) 
+const num = Math.round(Math.random()*2)+1 
 return num
 }
 
@@ -40,7 +40,7 @@ do{
         
         switch (opcion) {
             case '1':
-                game(1,parseInt(maquina()))
+                game(2,parseInt(maquina()))
                 alert('El usuario escogio: Piedra');
                 break;
 
@@ -50,7 +50,7 @@ do{
                 break;
 
             case '3':
-                game(3,parseInt(maquina()))
+                game(2,parseInt(maquina()))
                 alert('El usuario escogio: Tijera');
                 break;
 
